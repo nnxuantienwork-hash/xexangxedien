@@ -184,7 +184,7 @@ export default function LongformArticle() {
     rightAlt="Trạm sạc xe điện VinFast"
   />
   <p className="text-center text-sm text-slate-500 mt-4 italic max-w-3xl mx-auto px-4">
-    Xe máy điện đang dần trở thành phương tiện di chuyển quen thuộc trong đời sống đô thị, với hệ thống trạm sạc ngày càng phủ rộng tại các thành phố lớn.
+    Xe điện đang dần trở thành phương tiện di chuyển quen thuộc trong đời sống đô thị, với hệ thống trạm sạc ngày càng phủ rộng tại các thành phố lớn.
   </p>
 </section>
 
