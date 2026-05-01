@@ -207,7 +207,7 @@ export default function LongformArticle() {
 </section>
 
         {/* Floating Content Box 1 - Nhà báo Lê Tùng Anh */}
-        <section className="w-full py-6 bg-white">
+        <section className="w-full py-2 bg-white">
           <div className="max-w-5xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 60 }}
