@@ -149,7 +149,7 @@ export default function LongformArticle() {
   </div>
 </section>
 
-<section className="w-full py-3 bg-white">
+<section className="w-full py-8 bg-white">
   <div className="max-w-2xl mx-auto px-6 md:px-0">
     <motion.span 
       initial={{ opacity: 0 }}
