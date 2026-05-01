@@ -6,6 +6,8 @@ import EVChargingComparison from '@/components/EVChargingComparison';
 import FishboneDiagram from '@/components/FishboneDiagram';
 import { SplitImage } from '@/components/SplitImage';
 import { motion } from 'framer-motion';
+import ev-decision-infographic from '@/components/ev-decision-infographic';
+
 
 export default function LongformArticle() {
   return (
@@ -202,9 +204,20 @@ export default function LongformArticle() {
       <p className="text-justify text-lg leading-relaxed text-slate-700">
         Với tình hình hiện tại, tài xế mong muốn cải thiện chất lượng pin của xe điện, cụ thể là thời lượng pin và chất lượng bình điện. Giữa xu hướng chuyển đổi sang xe điện, anh cho rằng: &quot;Các hãng hiện nay cũng tung ra nhiều mã giảm giá để kích cầu. Nếu nhà nước và doanh nghiệp cùng cải thiện trạm sạc, phần mềm và hạ tầng thì xe điện chắc chắn sẽ thay thế hoàn toàn xe xăng trong tương lai&quot;. 
       </p>
+
+      {/* ev-decision-infographic */}
+        <div className="mt-12">
+          <FishboneDiagram />
+        </div>
     </motion.div>
   </div>
 </section>
+      <section className="w-full py-16 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <ev-decision-infographic />
+        </div>
+      </section>
+
 
         {/* Floating Content Box 1 - Nhà báo Lê Tùng Anh */}
         <section className="w-full pt-8 pb-20 bg-white">
