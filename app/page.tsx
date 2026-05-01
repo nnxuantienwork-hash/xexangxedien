@@ -6,7 +6,7 @@ import EVChargingComparison from '@/components/EVChargingComparison';
 import FishboneDiagram from '@/components/FishboneDiagram';
 import { SplitImage } from '@/components/SplitImage';
 import { motion } from 'framer-motion';
-import ev-decision-infographic from '@/components/ev-decision-infographic';
+import EvDecisionInfographic from '@/components/ev-decision-infographic';
 
 
 export default function LongformArticle() {
@@ -206,15 +206,12 @@ export default function LongformArticle() {
       </p>
 
       {/* ev-decision-infographic */}
-        <div className="mt-12">
-          <ev-decision-infographic />
-        </div>
     </motion.div>
   </div>
 </section>
       <section className="w-full py-16 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4">
-          <ev-decision-infographic />
+          <EvDecisionInfographic />
         </div>
       </section>
 
