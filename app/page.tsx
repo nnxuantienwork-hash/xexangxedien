@@ -207,7 +207,7 @@ export default function LongformArticle() {
 
       {/* ev-decision-infographic */}
         <div className="mt-12">
-          <FishboneDiagram />
+          <ev-decision-infographic />
         </div>
     </motion.div>
   </div>
