@@ -214,7 +214,7 @@ export default function LongformArticle() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true, margin: "-100px" }}
-              className="relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 md:p-12 shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-slate-100"
+              className="relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-5 md:p-12 shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-slate-100"
             >
               {/* Decorative accent */}
               <div className="absolute top-0 left-8 w-16 h-1 bg-gradient-to-r from-emerald-500 to-emerald-300 rounded-full" />
