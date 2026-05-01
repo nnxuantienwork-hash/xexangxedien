@@ -176,7 +176,7 @@ export default function LongformArticle() {
 </section>
 
 {/* Split Image 2 - After anh Nhã quote about 10-12 hours */}
-<section className="w-full bg-white py-8">
+<section className="w-full bg-white py-3">
   <SplitImage 
     leftImage="/images/xe-may-1.png"
     rightImage="/images/tram-sac-2.jpg"
