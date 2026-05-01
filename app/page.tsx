@@ -32,7 +32,7 @@ export default function LongformArticle() {
 
         {/* Câu chuyện cá nhân*/}
         {/* Section: Câu chuyện cá nhân - Chị Tuệ Minh*/}
-<section className="w-full py-20 bg-white">
+<section className="w-full py-12 bg-white">
   <div className="max-w-2xl mx-auto px-6 md:px-0">
     
     {/* TUỆ MINH*/}
@@ -78,7 +78,7 @@ export default function LongformArticle() {
   </div>
 </section>
 
-<section className="w-full py-20 bg-white">
+<section className="w-full py-5 bg-white">
   <div className="max-w-2xl mx-auto px-6 md:px-0">
     {/* Anh Duy*/}
     <motion.span 
@@ -149,7 +149,7 @@ export default function LongformArticle() {
   </div>
 </section>
 
-<section className="w-full bg-white">
+<section className="w-full py-10 bg-white">
   <div className="max-w-2xl mx-auto px-6">
     <motion.span 
       initial={{ opacity: 0 }}
