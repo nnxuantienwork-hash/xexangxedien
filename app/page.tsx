@@ -162,7 +162,7 @@ export default function LongformArticle() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      className="space-y-6"
+      className="space-y-10"
     >
       <p className="text-justify text-lg leading-relaxed text-slate-700">
         Anh Nguyễn Thanh Nhã (25 tuổi) hiện là tài xế của một hãng xe tiên phong mở ra dịch vụ vận tải bằng xe điện. Với kinh nghiệm gần 10 năm kiếm kế sinh nhai bằng nghề chạy xe ôm công nghệ và từng trải nghiệm cả xe xăng và xe điện, anh Nhã cho rằng chạy xe điện ít tốn kém hơn vì không phải thay nhớt thường xuyên như xe xăng. Anh cho biết: &quot;Tôi thường tốn khoảng 15.000 đồng cho một lần sạc đủ đi quãng đường đã tính sẵn. Dùng sạc cá nhân nên tôi mang đi đâu cũng được&quot;.
