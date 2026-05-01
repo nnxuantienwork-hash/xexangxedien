@@ -410,8 +410,6 @@ export default function EVDecisionInfographic() {
           <div className="relative w-full max-w-2xl">
             <div className="absolute top-0 left-1/2 w-0.5 h-4 bg-slate-300 -translate-x-1/2" />
             <div className="absolute top-4 left-1/4 right-1/4 h-0.5 bg-slate-300" />
-            <div className="absolute top-4 left-1/4 w-0.5 h-4 bg-slate-300" />
-            <div className="absolute top-4 right-1/4 w-0.5 h-4 bg-slate-300" />
           </div>
         </div>
 
