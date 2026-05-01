@@ -208,10 +208,11 @@ function FactorNode({
               exit={{ opacity: 0, y: 10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
               className={`
-                absolute z-50 left-0 right-0 top-full mt-2 p-4 rounded-lg shadow-2xl
-                ${isPositive ? "bg-emerald-600" : "bg-orange-600"}
-                text-white text-sm font-medium backdrop-blur-none
+                absolute z-[999] left-0 right-0 top-full mt-2 p-4 rounded-lg shadow-2xl
+                ${isPositive ? "bg-emerald-700" : "bg-orange-600"}
+                text-white text-sm font-medium
               `}
+
             >
               <div className="relative">
                 <div
