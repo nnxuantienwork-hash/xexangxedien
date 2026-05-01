@@ -25,7 +25,7 @@ export default function LongformArticle() {
            transition={{ duration: 0.6 }}
            className="text-justify text-lg md:text-xl leading-relaxed text-slate-800"
           >
-          Xe điện giờ đây gần như đã <span className="font-semibold text-emerald-600">&quot;cạnh tranh&quot; sòng phẳng</span> với những phương tiện truyền thống. Chia sẻ với <span className="italic">Thành Phố Mới</span>, nhiều người chọn xe điện làm phương tiện di chuyển chính, thậm chí là phương tiện dùng để mưu sinh, vì những tiện lợi của chúng trong quá trình sử dụng.
+          Từ số liệu thống kê, xe điện giờ đây gần như đã <span className="font-semibold text-emerald-600">&quot;cạnh tranh&quot; sòng phẳng</span> với những phương tiện truyền thống. Chia sẻ với <span className="italic">Thành Phố Mới</span>, chị Tuệ Minh, anh Anh Duy và anh Thanh Nhã đã chọn xe điện làm phương tiện di chuyển chính, thậm chí là phương tiện dùng để mưu sinh, vì những tiện lợi của chúng trong quá trình sử dụng.
           </motion.p>
          </div>
         </section>
