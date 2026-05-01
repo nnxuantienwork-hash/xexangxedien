@@ -116,7 +116,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 1.2 }}
           >
-            Câu chuyện xe xăng và xe điện hiện nay đã vượt ra ngoài giới hạn của một &quot;chiếc xe&quot; thông thường, mà ở đó là câu chuyện của một &quot;giải pháp di chuyển&quot;. Các phương tiện sử dụng nhiên liệu xanh, thân thiện với môi trường này đang được chú trọng như là một cách giải quyết tình trạng ô nhiễm môi trường.
+            Câu chuyện xe xăng và xe điện hiện nay đã vượt ra ngoài giới hạn của một &quot;chiếc xe&quot; thông thường, mà đó là câu chuyện về những &quot;giải pháp di chuyển&quot; của người dân. Các phương tiện sử dụng nhiên liệu xanh, thân thiện với môi trường này đang được chú trọng như là một cách giải quyết tình trạng ô nhiễm môi trường.
           </motion.p>
         </motion.div>
 
