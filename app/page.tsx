@@ -52,11 +52,15 @@ export default function LongformArticle() {
       className="space-y-6"
     >
       <p className="text-justify text-lg leading-relaxed text-slate-700">
-       Cuối năm 2025, làn sóng sử dụng xe điện bắt đầu tăng và tại Việt Nam, xu hướng này cũng được khuyến khích mạnh mẽ. Với ngân sách hiện có, chị Trần Tuệ Minh (phường Bình Thạnh, TP. HCM) đã quyết định mua xe máy điện.
+       Cuối năm 2025, làn sóng sử dụng xe điện bắt đầu tăng và tại Việt Nam và xu hướng này cũng được Chính phủ khuyến khích mạnh mẽ. Với ngân sách hiện có, chị Trần Tuệ Minh (phường Bình Thạnh, TP.HCM) đã quyết định mua xe máy điện và xem đây là phương tiện di chuyển lâu dài của mình.
       </p>
 
       <p className="text-justify text-lg leading-relaxed text-slate-700">
-       Hiện nay, chị Minh sử dụng xe điện để di chuyển từ nơi ở đến công ty với quãng đường khoảng 7km mỗi chiều. Do khoảng cách không quá xa, chiếc xe điện một pin mà chị mua, có thể đi được khoảng 130km cho mỗi lần sạc đầy, giúp chị chỉ cần sạc khoảng một lần mỗi tuần.
+       Hiện nay, chị Minh sử dụng xe điện để đi từ nơi ở đến công ty với tần suất gần như mỗi ngày và quãng đường di chuyển khoảng 7km mỗi chiều. Do khoảng cách không quá xa, chiếc xe điện dùng một pin mà chị mua có thể đi được khoảng 130km cho mỗi lần sạc đầy, điều này giúp chị chỉ cần sạc khoảng một lần mỗi tuần.
+      </p>
+
+      <p className="text-justify text-lg leading-relaxed text-slate-700">
+       Về chi phí dùng điện để sạc xe, chị Tuệ Minh chia sẻ: &quot;Giả sử lấy mức trung bình xe máy điện di chuyển 100km sau mỗi lần sạc đầy pin là khoảng 3kWh với giá điện hiện tại là 3.500 đồng/1kWh. Như vậy để đi được 100km người dùng xe máy điện sẽ phải chi trả 10.500 đồng để sạc pin. Tuần nào chị cũng sạc đều đặn nên là chị tốn hơn 50.000 - 70.000 đồng/tháng&quot;. 
       </p>
 
       <p className="text-justify text-lg leading-relaxed text-slate-700">
@@ -69,10 +73,6 @@ export default function LongformArticle() {
 
        <p className="text-justify text-lg leading-relaxed text-slate-700">
        Dù có nhiều ưu điểm, chị vẫn băn khoăn về một số bất cập, đặc biệt là khi xe gặp sự cố liên quan đến hệ thống điện bất ngờ trên đường thì việc tìm nơi sửa chữa còn khá khó khăn, do số lượng cửa hàng chuyên sửa xe điện tại TP. HCM chưa nhiều. Vì vậy, bên cạnh những lợi ích về chi phí và tiện lợi, chị cho rằng các nhà sản xuất cần tiếp tục cải thiện hệ thống dịch vụ hậu mãi để mang lại sự yên tâm hơn cho người dùng.
-       </p>
-
-       <p className="text-justify text-lg leading-relaxed text-slate-700">
-       Về chi phí dùng điện để sạc xe, chị Tuệ Minh chia sẻ: &quot;Giả sử lấy mức trung bình xe máy điện di chuyển 100km sau mỗi lần sạc đầy pin là khoảng 3kWh với giá điện hiện tại là 3.500 đồng/1kWh. Như vậy để đi được 100km người dùng xe máy điện sẽ phải chi trả 10.500 đồng để sạc pin. Tuần nào chị cũng sạc đều đặn nên là chị tốn hơn 50.000 - 70.000 đồng/tháng&quot;. 
       </p>
     </motion.div>
   </div>
