@@ -131,11 +131,11 @@ export default function LongformArticle() {
       </motion.blockquote>
 
        <p className="text-justify text-lg leading-relaxed text-slate-700">
-       &quot;May mắn là chung cư em có khu vực sạc miễn phí, nên em chỉ đóng phí gửi xe như xe xăng. Tính ra chi phí duy trì gần như bằng 0&quot;, Duy chia sẻ.
+       &quot;May mắn là chung cư tôi có khu vực sạc miễn phí, nên tôi chỉ đóng phí gửi xe như xe xăng. Tính ra chi phí duy trì gần như bằng 0&quot;, Duy chia sẻ.
        </p>
 
        <p className="text-justify text-lg leading-relaxed text-slate-700">
-       Yếu tố giữ chân Duy không chỉ nằm ở kinh tế mà còn ở trải nghiệm vận hành: xe chạy êm, gần như không có độ rung, giúp giảm mệt mỏi khi di chuyển đường dài trong điều kiện giao thông đông đúc.
+       Yếu tố giữ chân Duy không chỉ nằm ở kinh tế mà còn ở trải nghiệm vận hành: Xe chạy êm, gần như không có độ rung, giúp giảm mệt mỏi khi di chuyển đường dài trong điều kiện giao thông đông đúc.
        </p>
 
        <p className="text-justify text-lg leading-relaxed text-slate-700">
