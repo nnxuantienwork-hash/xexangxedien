@@ -162,7 +162,7 @@ function FactorNode({
           boxShadow: isActive
             ? isPositive
               ? "0 8px 30px rgba(16, 185, 129, 0.3)"
-              : "0 8px 30px rgba(239, 68, 68, 0.3)"
+              : "0 8px 30px rgba(249, 115, 22, 0.3)" // orange
             : "0 2px 8px rgba(0, 0, 0, 0.08)",
         }}
         transition={{ duration: 0.3 }}
@@ -170,8 +170,8 @@ function FactorNode({
           relative cursor-pointer rounded-xl p-4 border-2 transition-colors duration-300
           ${
             isPositive
-              ? "bg-emerald-50 border-emerald-200 hover:border-emerald-400"
-              : "bg-red-50 border-red-200 hover:border-red-400"
+              ? "bg-emerald-100 border-emerald-300 hover:border-emerald-500"
+              : "bg-orange-100 border-orange-300 hover:border-orange-500"
           }
         `}
       >
@@ -179,7 +179,7 @@ function FactorNode({
           <div
             className={`
               flex items-center justify-center w-10 h-10 rounded-lg
-              ${isPositive ? "bg-emerald-100 text-emerald-600" : "bg-red-100 text-red-600"}
+              ${isPositive ? "bg-emerald-200 text-emerald-700" : "bg-orange-200 text-orange-700"}
             `}
           >
             <Icon className="w-5 h-5" />
@@ -190,7 +190,7 @@ function FactorNode({
               <span
                 className={`
                   text-xs font-bold px-1.5 py-0.5 rounded
-                  ${isPositive ? "bg-emerald-200 text-emerald-700" : "bg-red-200 text-red-700"}
+                  ${isPositive ? "bg-emerald-200 text-emerald-700" : "bg-orange-100 text-orange-600"}
                 `}
               >
                 {isPositive ? "+" : "-"}
@@ -209,7 +209,7 @@ function FactorNode({
               transition={{ duration: 0.2 }}
               className={`
                 absolute z-50 left-0 right-0 top-full mt-2 p-4 rounded-lg shadow-2xl
-                ${isPositive ? "bg-emerald-950" : "bg-red-950"}
+                ${isPositive ? "bg-emerald-600" : "bg-orange-600"}
                 text-white text-sm font-medium backdrop-blur-none
               `}
             >
@@ -218,7 +218,7 @@ function FactorNode({
                   className={`
                     absolute -top-5 left-6 w-0 h-0
                     border-l-8 border-r-8 border-b-8 border-transparent
-                    ${isPositive ? "border-b-emerald-950" : "border-b-red-950"}
+                    ${isPositive ? "border-b-emerald-950" : "border-b-orange-600"}
                   `}
                 />
                 {factor.description}
@@ -297,7 +297,7 @@ function Legend() {
         <span className="text-sm text-slate-600">(+) Thúc đẩy mua</span>
       </div>
       <div className="flex items-center gap-2">
-        <div className="w-4 h-4 rounded bg-red-500" />
+        <div className="w-4 h-4 rounded bg-orange-500" />
         <span className="text-sm text-slate-600">(-) Cản trở mua</span>
       </div>
     </motion.div>
@@ -330,7 +330,7 @@ function DetailModal({
         onClick={(e) => e.stopPropagation()}
         className={`
           relative w-full max-w-md p-6 rounded-2xl shadow-2xl
-          ${isPositive ? "bg-emerald-50" : "bg-red-50"}
+          ${isPositive ? "bg-emerald-50" : "bg-orange-50"}
         `}
       >
         <button
@@ -344,7 +344,7 @@ function DetailModal({
           <div
             className={`
               flex items-center justify-center w-14 h-14 rounded-xl
-              ${isPositive ? "bg-emerald-200 text-emerald-700" : "bg-red-200 text-red-700"}
+              ${isPositive ? "bg-emerald-200 text-emerald-700" : "bg-orange-200 text-orange-700"}
             `}
           >
             <Icon className="w-7 h-7" />
@@ -354,7 +354,7 @@ function DetailModal({
             <span
               className={`
                 text-sm font-medium px-2 py-0.5 rounded
-                ${isPositive ? "bg-emerald-200 text-emerald-700" : "bg-red-200 text-red-700"}
+                ${isPositive ? "bg-emerald-200 text-emerald-700" : "bg-orange-200 text-orange-700"}
               `}
             >
               {isPositive ? "Yếu tố tích cực" : "Yếu tố tiêu cực"}
