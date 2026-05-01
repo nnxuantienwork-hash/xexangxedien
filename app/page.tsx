@@ -78,7 +78,7 @@ export default function LongformArticle() {
   </div>
 </section>
 
-<section className="w-full py-5 bg-white">
+<section className="w-full py-3 bg-white">
   <div className="max-w-2xl mx-auto px-6 md:px-0">
     {/* Anh Duy*/}
     <motion.span 
