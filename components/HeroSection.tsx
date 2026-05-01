@@ -61,7 +61,7 @@ export function HeroSection() {
 
       {/* Content Container with scroll-based fade */}
       <motion.div 
-        className="relative z-10 min-h-screen flex flex-col items-center justify-end pb-95 px-4"
+        className="relative z-10 min-h-screen flex flex-col items-center justify-end pt-24 px-4"
         style={{ 
           opacity: contentOpacity,
           y: contentY,
