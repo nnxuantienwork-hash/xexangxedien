@@ -154,7 +154,7 @@ export default function LongformArticle() {
     <motion.span 
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="text-emerald-600 font-semibold tracking-wide text-3xl mb-7 block text-center font-serif"
+      className="text-emerald-600 font-semibold tracking-wide text-3xl mb-6 block text-center font-serif"
     >
       Xe điện phải có quãng nghỉ để sạc
     </motion.span>
