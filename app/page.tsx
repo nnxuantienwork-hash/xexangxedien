@@ -164,11 +164,11 @@ export default function LongformArticle() {
       whileInView={{ opacity: 1, y: 0 }}
       className="space-y-6"
     >
-      <p className="text-justify text-slate-700 leading-relaxed text-lg md:text-xl">
+      <p className="text-justify text-lg leading-relaxed text-slate-700">
         Anh Nguyễn Thanh Nhã (25 tuổi) hiện là tài xế của một hãng xe tiên phong mở ra dịch vụ vận tải bằng xe điện. Với kinh nghiệm gần 10 năm kiếm kế sinh nhai bằng nghề chạy xe ôm công nghệ và từng trải nghiệm cả xe xăng và xe điện, anh Nhã cho rằng chạy xe điện ít tốn kém hơn vì không phải thay nhớt thường xuyên như xe xăng. Anh cho biết: &quot;Tôi thường tốn khoảng 15.000 đồng cho một lần sạc đủ đi quãng đường đã tính sẵn. Dùng sạc cá nhân nên tôi mang đi đâu cũng được&quot;.
       </p>
 
-      <p className="text-justify text-slate-700 leading-relaxed text-lg md:text-xl">
+      <p className="text-justify text-lg leading-relaxed text-slate-700">
        Dù anh Nhã vẫn còn trăn trở về quãng đường và thời gian mà xe điện có thể đáp ứng được. &quot;Việc di chuyển 10 - 12 tiếng một ngày thì không chắc, có ngày mình chỉ chạy 4 tiếng thôi. So về độ dài di chuyển thì xe xăng chắc chắn hơn vì xe xăng đỡ phải sạc, còn xe điện thì không chạy liên tục 10 - 12 tiếng được&quot;, anh Nhã chia sẻ. 
       </p>
     </motion.div>
@@ -195,11 +195,11 @@ export default function LongformArticle() {
       whileInView={{ opacity: 1, y: 0 }}
       className="space-y-6"
     >
-      <p className="text-justify text-slate-700 leading-relaxed text-lg md:text-xl">
+      <p className="text-justify text-lg leading-relaxed text-slate-700">
         Nhiều tài xế xe điện vẫn lo ngại về quãng nghỉ của xe điện. &quot;Xe xăng thì hết là đổ rồi đi tiếp ngay, còn xe điện thì phải có quãng nghỉ để sạc. Đôi khi đang có khách mà nhìn bình điện thấp cũng hơi áp lực. Hiện tại hệ thống trạm sạc cũng bắt đầu xuất hiện nhiều nhưng với mật độ tài xế tăng nhanh như bây giờ thì vẫn cần cải thiện thêm để anh em không phải chờ đợi lâu&quot;, anh Nhã cho biết thêm. Theo anh, xe điện vẫn ở mức tạm ổn cho nhu cầu di chuyển trong thành phố, nhưng nếu để chạy liên tỉnh hoặc chạy cường độ cực cao thì lộ trình triển khai trạm sạc vẫn cần phải dày đặc hơn nữa. 
       </p>
 
-      <p className="text-justify text-slate-700 leading-relaxed text-lg md:text-xl">
+      <p className="text-justify text-lg leading-relaxed text-slate-700">
         Với tình hình hiện tại, tài xế mong muốn cải thiện chất lượng pin của xe điện, cụ thể là thời lượng pin và chất lượng bình điện. Giữa xu hướng chuyển đổi sang xe điện, anh cho rằng: &quot;Các hãng hiện nay cũng tung ra nhiều mã giảm giá để kích cầu. Nếu nhà nước và doanh nghiệp cùng cải thiện trạm sạc, phần mềm và hạ tầng thì xe điện chắc chắn sẽ thay thế hoàn toàn xe xăng trong tương lai&quot;. 
       </p>
     </motion.div>
