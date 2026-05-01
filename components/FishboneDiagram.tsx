@@ -96,7 +96,7 @@ export default function FishboneDiagram() {
       </motion.h2>
 
       {/* Timeline Container */}
-      <div className="relative" style={{ height: '500px' }}>
+      <div className="relative hidden md:block" style={{ height: '500px' }}>
         {/* Top cards area - 180px */}
         <div className="absolute top-0 left-0 right-0" style={{ height: '180px' }}>
           {policies.map((yearGroup, yearIndex) => (
@@ -127,6 +127,7 @@ export default function FishboneDiagram() {
             ))
           ))}
         </div>
+         
 
         {/* Connector lines from top cards to circles */}
         <div className="absolute left-0 right-0" style={{ top: '180px', height: '40px' }}>
@@ -277,7 +278,54 @@ export default function FishboneDiagram() {
             }}
           />
         </div>
+      </div> {/* end desktop timeline */}
+
+{/* MOBILE TIMELINE */}
+<div className="md:hidden space-y-6 mt-6">
+  {policies.map((yearGroup) => (
+    <div key={yearGroup.year} className="relative pl-6">
+
+      {/* line */}
+      <div className="absolute left-2 top-2 bottom-2 w-0.5 bg-emerald-400" />
+
+      {/* dot */}
+      <div className="absolute left-0 top-2 w-4 h-4 bg-amber-500 border-2 border-emerald-700 rounded-full" />
+
+      {/* content */}
+      <div className="ml-4">
+        <p className="font-bold text-emerald-800 text-lg mb-2">
+          {yearGroup.year}
+        </p>
+
+        <div className="space-y-4">
+          {yearGroup.items.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-4 shadow-md border-l-4 border-emerald-600"
+            >
+              <h3 className="text-sm font-bold text-emerald-800 mb-1">
+                {item.title}
+              </h3>
+
+              {Array.isArray(item.content) ? (
+                item.content.map((line, i) => (
+                  <p key={i} className="text-xs text-slate-600">
+                    {line}
+                  </p>
+                ))
+              ) : (
+                <p className="text-xs text-slate-600">
+                  {item.content}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
+    </div>
+  ))}
+</div>
+
     </div>
   )
 }
