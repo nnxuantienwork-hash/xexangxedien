@@ -203,14 +203,15 @@ function FactorNode({
         <AnimatePresence>
           {isActive && (
             <motion.div
-              initial={{ opacity: 0, y: 10, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.95 }}
+              initial={{ y: 10, scale: 0.95 }}
+              animate={{ y: 0, scale: 1 }}
+              exit={{ y: 10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
               className={`
                 absolute z-[999] left-0 right-0 top-full mt-2 p-4 rounded-lg shadow-2xl
                 ${isPositive ? "bg-emerald-700" : "bg-orange-600"}
                 text-white text-sm font-medium
+                isolate 
               `}
 
             >
@@ -410,6 +411,8 @@ export default function EVDecisionInfographic() {
           <div className="relative w-full max-w-2xl">
             <div className="absolute top-0 left-1/2 w-0.5 h-4 bg-slate-300 -translate-x-1/2" />
             <div className="absolute top-4 left-1/4 right-1/4 h-0.5 bg-slate-300" />
+            <div className="absolute top-4 left-1/4 w-0.5 h-4 bg-slate-300" />
+            <div className="absolute top-4 right-1/4 w-0.5 h-4 bg-slate-300" />
           </div>
         </div>
 
