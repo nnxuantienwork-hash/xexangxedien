@@ -149,8 +149,8 @@ export default function LongformArticle() {
   </div>
 </section>
 
-<section className="w-full py-15 bg-white">
-  <div className="max-w-2xl mx-auto px-6 md:px-0">
+<section className="w-full py-18 bg-white">
+  <div className="max-w-2xl mx-auto px-12 md:px-0">
     <motion.span 
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
