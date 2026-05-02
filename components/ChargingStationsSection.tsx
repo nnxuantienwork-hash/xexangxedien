@@ -8,7 +8,7 @@ import { STATIONS_WITH_COORDS } from '../lib/charging-stations-data';
 export default function ChargingStationsSection() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDistrict, setSelectedDistrict] = useState('');
-  
+
 console.log({
   searchQuery,
   selectedDistrict,
@@ -66,23 +66,6 @@ console.log({
 
                   </div>
                 ))}
-              </div>
-
-              {/* ===== TỔNG QUAN ===== */}
-              <div className="grid grid-cols-2 gap-4 my-6">
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <p className="text-sm text-gray-500">Tổng trạm tại TP.HCM</p>
-                  <p className="text-2xl font-bold text-green-900">
-                    {STATIONS_WITH_COORDS.length}
-                  </p>
-                </div>
-
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <p className="text-sm text-gray-500">Số quận/huyện có trạm</p>
-                  <p className="text-2xl font-bold text-green-900">
-                    {[...new Set(STATIONS_WITH_COORDS.map(s => s.district))].length}
-                  </p>
-                </div>
               </div>
             </>
           );
