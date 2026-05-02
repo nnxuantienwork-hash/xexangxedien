@@ -37,12 +37,7 @@ export default function ChargingStationsMap({ searchQuery, selectedDistrict }: M
       <div
         key={station.id}
         onMouseEnter={() => setHoveredStation(station)}
-        onMouseLeave={(e) => {
-          if (!e.currentTarget.contains(e.relatedTarget as Node)) {
-            setHoveredStation(null);
-          }
-        }}
-
+        onMouseLeave={() => setHoveredStation(null)}
         onClick={() => {
           window.open(
             `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`,
@@ -70,45 +65,29 @@ export default function ChargingStationsMap({ searchQuery, selectedDistrict }: M
           </div>
         </div>
 
-        {/* 🔥 POPUP */}
+        {/* MINI MAP */}
         {hoveredStation?.id === station.id && (
-          <div className="absolute left-0 top-full mt-2 w-full bg-white shadow-xl rounded-xl p-4 border z-[9999]">
-            <h4 className="font-bold text-green-900 mb-2">
-              {station.name}
-            </h4>
-
-            <p className="text-sm text-gray-600">
-              {station.address}
-            </p>
-
-            <div className="mt-2 text-xs text-gray-500">
-              {station.district} • {station.ports}
-            </div>
-
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                window.open(
-                  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`,
-                  '_blank'
-                );
-              }}
-              className="mt-3 w-full bg-green-900 text-white py-2 rounded-lg text-sm hover:bg-green-800"
-            >
-              Xem chỉ đường
-            </button>
+          <div className="absolute left-0 top-full mt-2 w-full h-48 rounded-lg overflow-hidden border shadow-lg z-[9999]">
+            <iframe
+              width="100%"
+              height="100%"
+              loading="lazy"
+              className="border-0"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(
+                station.address
+              )}&output=embed`}
+            />
           </div>
         )}
       </div>
     ))}
   </div>
 ) : (
-
-          <div className="p-12 text-center">
-            <p className="text-gray-600 font-medium">Không tìm thấy trạm sạc</p>
-            <p className="text-gray-500 text-sm mt-1">Vui lòng thử tìm kiếm khác</p>
-          </div>
-        )}
+  <div className="p-12 text-center">
+    <p className="text-gray-600 font-medium">Không tìm thấy trạm sạc</p>
+    <p className="text-gray-500 text-sm mt-1">Vui lòng thử tìm kiếm khác</p>
+  </div>
+)}
       </div>
 
       {/* Station details panel */}
