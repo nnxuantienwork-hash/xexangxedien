@@ -208,16 +208,18 @@ function FactorNode({
               exit={{ y: 10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
               className={`
-                absolute z-[9999] left-0 right-0 top-full mt-2
+                absolute z-[99999] left-0 right-0 top-full mt-2
                 p-4 rounded-lg
                 ${isPositive ? "bg-emerald-700" : "bg-orange-600"}
                 text-white text-sm font-medium
                 shadow-xl
                 overflow-hidden
-                `}
+                isolate
+              `}
+
               >
 
-              <div className="relative">
+              <div className="relative z-0">
                 <div
                   className={`
                     absolute -top-5 left-6 w-0 h-0
