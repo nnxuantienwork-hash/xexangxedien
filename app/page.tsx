@@ -313,6 +313,56 @@ export default function LongformArticle() {
           <ChargingStationsSection />
         </section>
 
+<section className="w-full py-6 bg-white">
+  <div className="max-w-5xl mx-auto px-4">
+    <p className="text-right text-sm text-slate-500 italic">
+      Thực hiện: Nhóm phóng viên báo Thành Phố Mới
+    </p>
+  </div>
+</section>
+
+<section className="w-full py-10 bg-slate-50">
+  <div className="max-w-5xl mx-auto px-4">
+
+    {/* Title */}
+    <h3 className="text-lg font-semibold text-slate-800 mb-4">
+      Tài liệu tham khảo:
+    </h3>
+
+    {/* Divider */}
+    <div className="border-t border-slate-300 mb-4"></div>
+
+    {/* Scroll box */}
+    <div className="max-h-64 overflow-y-auto pr-2 text-slate-700 leading-relaxed space-y-3 text-sm">
+
+      <p>
+        - Linh, T. T. (2018). CÁC YẾU TỐ ẢNH HƯỞNG ĐẾN QUYẾT ĐỊNH MUA XE ĐẠP ĐIỆN CỦA NGƯỜI TIÊU DÙNG. TNU Journal of Science and Technology, 186(10), 159-164.
+      </p>
+
+      <p>
+        - Minh Sơn. (2025, October 10). Việt Nam có quy mô trạm sạc đứng đầu Đông Nam Á, có điểm hơn cả châu Âu. Tuổi Trẻ.
+      </p>
+
+      <p>
+        - Ngô, T. N. H., & Nguyễn, A. S. (2023). Quy trình kiểm định và thử nghiệm trụ sạc xe điện.
+      </p>
+
+      <p>
+        - Oto360. (n.d.). Trạm sạc VinFast Hồ Chí Minh.
+      </p>
+
+      <p>
+        - Pham, B. N., Nghiem, T. N., & Dao, M. P. (2022). Tác động của chính sách đến thị trường xe điện trên thế giới và đề xuất giải pháp phát triển thị trường xe điện cho Việt Nam. Petrovietnam Journal, 7, 28-41.
+      </p>
+
+      <p>
+        - Thảo, T. T., & Linh, T. K. (2021). Các yếu tố ảnh hưởng đến ý định mua xe máy điện Vinfast của người dân trên địa bàn Tp. HCM. Journal of Science and Technology-IUH, 50(02).
+      </p>
+
+    </div>
+  </div>
+</section>
+
         {/* Footer Section */}
         <footer className="w-full bg-slate-900 text-white py-12 px-4 md:px-8">
           <div className="max-w-5xl mx-auto">
