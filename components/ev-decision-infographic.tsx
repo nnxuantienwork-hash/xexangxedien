@@ -150,11 +150,12 @@ function FactorNode({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: dimmed ? 0.3 : 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="relative"
+      className={`relative ${isActive ? "z-50" : "z-0"}`}
       onMouseEnter={() => onHover(factor.id)}
       onMouseLeave={() => onHover(null)}
       onClick={() => onClick(factor)}
     >
+
       <motion.div
         whileHover={{ scale: 1.05 }}
         animate={{
