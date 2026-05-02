@@ -11,6 +11,8 @@ interface MapProps {
 
 export default function ChargingStationsMap({ searchQuery, selectedDistrict }: MapProps) {
   const [selectedStation, setSelectedStation] = useState<ChargingStation | null>(null);
+  const [hoveredStation, setHoveredStation] = useState<ChargingStation | null>(null);
+
 
   // Filter stations based on search query and district
   const filteredStations = useMemo(() => {
@@ -26,48 +28,82 @@ export default function ChargingStationsMap({ searchQuery, selectedDistrict }: M
   }, [searchQuery, selectedDistrict]);
 
   return (
-    <div className="w-full bg-white rounded-lg overflow-hidden shadow-lg">
+    <div className="w-full bg-white rounded-lg shadow-lg overflow-visible">
       {/* Stations List */}
-      <div className="divide-y divide-gray-200">
+      <div className="divide-y divide-gray-200 overflow-visible">
         {filteredStations.length > 0 ? (
-          <div className="space-y-2 p-4">
-            {filteredStations.map((station) => (
-              <button
-                key={station.id}
-                onClick={() => setSelectedStation(station)}
-                className="w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-[#2d5f3f] hover:bg-[#2d5f3f]/5 transition-all duration-200"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 text-sm line-clamp-2">
-                      {station.name}
-                    </h3>
-                    <p className="text-xs text-gray-600 mt-1 line-clamp-1">{station.address}</p>
-                    <div className="flex items-center gap-2 mt-2">
-                      <span className="inline-block px-2 py-1 bg-[#2d5f3f]/10 text-[#2d5f3f] rounded text-xs font-medium">
-                        {station.district}
-                      </span>
-                      <span className="text-xs text-gray-500">{station.ports}</span>
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0 text-[#f59e0b]">
-                    <svg
-                      className="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M7.21 14.77a.75.75 0 01.02-1.06L14.168 8.75l-6.436-.002a.75.75 0 010-1.5l8.5.003a.75.75 0 01.75.75v8.5a.75.75 0 01-1.5 0v-6.43l-6.947 6.028a.75.75 0 01-1.059-.02z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </button>
-            ))}
+  <div className="space-y-2 p-4">
+    {filteredStations.map((station) => (
+      <div
+        key={station.id}
+        onMouseEnter={() => setHoveredStation(station)}
+        onMouseLeave={(e) => {
+          if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+            setHoveredStation(null);
+          }
+        }}
+
+        onClick={() => {
+          window.open(
+            `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`,
+            '_blank'
+          );
+        }}
+        className="relative cursor-pointer p-4 rounded-lg border-2 border-gray-200 hover:border-[#2d5f3f] hover:bg-[#2d5f3f]/5 transition-all duration-200"
+      >
+        {/* Nội dung */}
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1">
+            <h3 className="font-semibold text-gray-900 text-sm line-clamp-2">
+              {station.name}
+            </h3>
+            <p className="text-xs text-gray-600 mt-1 line-clamp-1">
+              {station.address}
+            </p>
+
+            <div className="flex items-center gap-2 mt-2">
+              <span className="px-2 py-1 bg-[#2d5f3f]/10 text-[#2d5f3f] rounded text-xs">
+                {station.district}
+              </span>
+              <span className="text-xs text-gray-500">{station.ports}</span>
+            </div>
           </div>
-        ) : (
+        </div>
+
+        {/* 🔥 POPUP */}
+        {hoveredStation?.id === station.id && (
+          <div className="absolute left-0 top-full mt-2 w-full bg-white shadow-xl rounded-xl p-4 border z-[9999]">
+            <h4 className="font-bold text-green-900 mb-2">
+              {station.name}
+            </h4>
+
+            <p className="text-sm text-gray-600">
+              {station.address}
+            </p>
+
+            <div className="mt-2 text-xs text-gray-500">
+              {station.district} • {station.ports}
+            </div>
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(
+                  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`,
+                  '_blank'
+                );
+              }}
+              className="mt-3 w-full bg-green-900 text-white py-2 rounded-lg text-sm hover:bg-green-800"
+            >
+              Xem chỉ đường
+            </button>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+) : (
+
           <div className="p-12 text-center">
             <p className="text-gray-600 font-medium">Không tìm thấy trạm sạc</p>
             <p className="text-gray-500 text-sm mt-1">Vui lòng thử tìm kiếm khác</p>
