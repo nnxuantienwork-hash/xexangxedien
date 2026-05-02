@@ -76,7 +76,7 @@ export default function LongformArticle() {
   </div>
 
   <p className="text-center text-sm text-slate-500 mt-4 italic">
-    Nhiều kỳ vọng về tương lai của xe điện. Ảnh: Hữu Qui
+    TP.HCM đang đẩy nhanh lộ trình chuyển đổi 100% xe buýt sang điện hoặc năng lượng xanh vào năm 2030, bắt đầu với mục tiêu 32 tuyến (572 xe) vào năm 2027 và thêm 21 tuyến (gần 400 xe) năm 2028. Ảnh: Hữu Qui
   </p>
 </div>
 
