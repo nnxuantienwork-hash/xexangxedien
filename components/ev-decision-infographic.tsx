@@ -381,22 +381,21 @@ function DetailModal({
 export default function EVDecisionInfographic() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const textRef = useRef<HTMLDivElement>(null)
+  const overlayRef = useRef<HTMLDivElement>(null)
 
   const [activeFactorId, setActiveFactorId] = useState<string | null>(null)
   const [selectedFactor, setSelectedFactor] = useState<Factor | null>(null)
 
   useEffect(() => {
-    if (!sectionRef.current || !textRef.current) return
+    if (!sectionRef.current || !textRef.current || !overlayRef.current) return
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
-        scrollTrigger: {
+          scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
-          end: "+=60%",
+          start: "top 80%",
+          end: "top -20%",
           scrub: true,
-          pin: true,
-          pinSpacing: false,
         },
       })
 
@@ -406,15 +405,42 @@ export default function EVDecisionInfographic() {
         { y: 0, opacity: 1 }
       )
 
-      tl.to(textRef.current, { y: -200, opacity: 0 })
+      tl.to(
+        overlayRef.current,
+        {
+          backgroundColor: "rgba(0,0,0,0.4)",
+          backdropFilter: "blur(6px)",
+        },
+        "<"
+      )
+
+      tl.to(textRef.current, {
+        y: -400,
+        opacity: 0,
+      })
+
+      tl.to(
+        overlayRef.current,
+        {
+          backgroundColor: "rgba(0,0,0,0)",
+          backdropFilter: "blur(0px)",
+        },
+        "<"
+      )
     }, sectionRef)
 
-    return () => ctx.revert()
-  }, [])
+  return () => ctx.revert()
+}, [])
+
 
 
   return (
   <div ref={sectionRef} className="bg-slate-50 py-12 px-4 relative">
+
+    <div
+      ref={overlayRef}
+      className="pointer-events-none absolute inset-0 z-40"
+    />
 
     <div className="max-w-5xl mx-auto">
       {/* Header */}
@@ -434,7 +460,7 @@ export default function EVDecisionInfographic() {
 
 <div
   ref={textRef}
-  className="absolute bottom-10 left-1/2 -translate-x-1/2 max-w-xl bg-orange-500/95 text-white p-6 rounded-2xl shadow-2xl z-50"
+  className="absolute top-[70%] left-1/2 -translate-x-1/2 max-w-xl bg-orange-500/95 text-white p-6 rounded-2xl shadow-2xl z-50"
 >
   <p className="text-base leading-relaxed">
     Câu chuyện của chị Tuệ Minh, anh Anh Duy và anh Thanh Nhã không phải là những trường hợp cá biệt.
