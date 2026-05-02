@@ -7,6 +7,8 @@ import FishboneDiagram from '@/components/FishboneDiagram';
 import { SplitImage } from '@/components/SplitImage';
 import { motion } from 'framer-motion';
 import EvDecisionInfographic from '@/components/ev-decision-infographic';
+import ChargingStationsSection from '@/components/ChargingStationsSection';
+
 
 
 
@@ -271,6 +273,11 @@ export default function LongformArticle() {
           <FishboneDiagram />
         </section>
 
+
+        {/* Charging Stations Section */}
+        <section className="w-full py-16 bg-slate-50">
+          <ChargingStationsSection />
+        </section>
 
         {/* Footer Section */}
         <footer className="w-full bg-slate-900 text-white py-12 px-4 md:px-8">
