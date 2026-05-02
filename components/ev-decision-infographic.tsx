@@ -150,7 +150,7 @@ function FactorNode({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: dimmed ? 0.3 : 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="relative z-0"
+      className="relative"
       onMouseEnter={() => onHover(factor.id)}
       onMouseLeave={() => onHover(null)}
       onClick={() => onClick(factor)}
@@ -208,16 +208,15 @@ function FactorNode({
               exit={{ y: 10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
               className={`
-                absolute z-[9999] left-0 right-0 top-full mt-2 p-4 rounded-lg shadow-2xl
+                absolute z-[9999] left-0 right-0 top-full mt-2
+                p-4 rounded-lg
                 ${isPositive ? "bg-emerald-700" : "bg-orange-600"}
                 text-white text-sm font-medium
-                bg-opacity-100 backdrop-blur-0
-                before:absolute before:inset-0 before:bg-inherit before:rounded-lg before:z-[-1]
-              `}
-            >
+                shadow-xl
+                overflow-hidden
+                `}
+              >
 
-
-            >
               <div className="relative">
                 <div
                   className={`
@@ -257,8 +256,6 @@ function BranchSection({
       className="flex-1"
     >
       <div className="relative">
-        {/* Connecting line to root */}
-        <div className="hidden lg:block absolute -top-8 left-1/2 w-0.5 h-8 bg-slate-300" />
 
         {/* Branch header */}
         <motion.div
@@ -378,76 +375,64 @@ export default function EVDecisionInfographic() {
   const [selectedFactor, setSelectedFactor] = useState<Factor | null>(null)
 
   return (
-    <div className="min-h-screen bg-slate-50 py-12 px-4">
-      <div className="max-w-5xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
-            Các yếu tố ảnh hưởng đến việc mua xe điện
-          </h1>
-          <p className="text-slate-500 max-w-2xl mx-auto">
-            Khám phá các yếu tố thúc đẩy và cản trở quyết định mua xe điện tại Việt Nam
-          </p>
-        </motion.div>
+  <div className="min-h-screen bg-slate-50 py-12 px-4">
+    <div className="max-w-5xl mx-auto">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center mb-12"
+      >
+        <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
+          Các yếu tố ảnh hưởng đến việc mua xe điện
+        </h1>
+        <p className="text-slate-500 max-w-2xl mx-auto">
+          Khám phá các yếu tố thúc đẩy và cản trở quyết định mua xe điện tại Việt Nam
+        </p>
+      </motion.div>
 
-        {/* Root node */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex justify-center mb-8"
-        >
-          <div className="bg-emerald-600 text-white rounded-2xl px-8 py-4 shadow-lg shadow-emerald-200">
-            <h2 className="font-semibold text-lg text-center">
-              Quyết định / Ý định mua xe điện
-            </h2>
-          </div>
-        </motion.div>
-
-        {/* Connecting lines */}
-        <div className="hidden lg:flex justify-center mb-8">
-          <div className="relative w-full max-w-5xl flex justify-between px-4">
-            <div className="absolute top-0 left-1/2 w-0.5 h-4 bg-slate-300 -translate-x-1/2" />
-            <div className="absolute top-4 left-1/4 right-1/4 h-0.5 bg-slate-300" />
-            <div className="absolute top-4 left-0 right-0 flex justify-between px-4">
-              <div className="w-0.5 h-4 bg-slate-300" />
-              <div className="w-0.5 h-4 bg-slate-300" />
-            </div>
-          </div>
+      {/* Root node */}
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex justify-center mb-8"
+      >
+        <div className="bg-emerald-600 text-white rounded-2xl px-8 py-4 shadow-lg shadow-emerald-200">
+          <h2 className="font-semibold text-lg text-center">
+            Quyết định / Ý định mua xe điện
+          </h2>
         </div>
+      </motion.div>
 
-        {/* Branches */}
-        <div className="flex flex-col lg:flex-row gap-8">
-          {branches.map((branch, index) => (
-            <BranchSection
-              key={branch.id}
-              branch={branch}
-              activeFactorId={activeFactorId}
-              onHover={setActiveFactorId}
-              onClick={setSelectedFactor}
-              index={index}
-            />
-          ))}
-        </div>
-
-        {/* Legend */}
-        <Legend />
-
-        {/* Detail Modal */}
-        <AnimatePresence>
-          {selectedFactor && (
-            <DetailModal
-              factor={selectedFactor}
-              onClose={() => setSelectedFactor(null)}
-            />
-          )}
-        </AnimatePresence>
+      {/* Branches */}
+      <div className="flex flex-col lg:flex-row gap-8">
+        {branches.map((branch, index) => (
+          <BranchSection
+            key={branch.id}
+            branch={branch}
+            activeFactorId={activeFactorId}
+            onHover={setActiveFactorId}
+            onClick={setSelectedFactor}
+            index={index}
+          />
+        ))}
       </div>
+
+      {/* Legend */}
+      <Legend />
     </div>
-  )
+
+    {/* Modal */}
+    <AnimatePresence>
+      {selectedFactor && (
+        <DetailModal
+          factor={selectedFactor}
+          onClose={() => setSelectedFactor(null)}
+        />
+      )}
+    </AnimatePresence>
+  </div>
+)
 }
