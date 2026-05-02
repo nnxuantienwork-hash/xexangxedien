@@ -70,8 +70,6 @@ export default function LongformArticle() {
   <img
     src="/images/bus.jpg"
     alt="Xe buýt điện tại TP.HCM"
-    width={500}
-    height={300}
     className="rounded-lg shadow-md object-cover"
   />
   <p className="text-center text-sm text-slate-500 mt-4 italic max-w-3xl mx-auto px-4">
