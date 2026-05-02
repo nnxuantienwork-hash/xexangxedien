@@ -1,7 +1,9 @@
 "use client"
-import IntroPopup from "./IntroPopup"
-import { useState } from "react"
+
+import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import {
   User,
   Award,
@@ -16,6 +18,9 @@ import {
   Gift,
   X,
 } from "lucide-react"
+
+gsap.registerPlugin(ScrollTrigger)
+
 
 type Factor = {
   id: string
@@ -374,12 +379,42 @@ function DetailModal({
 }
 
 export default function EVDecisionInfographic() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const textRef = useRef<HTMLDivElement>(null)
+
   const [activeFactorId, setActiveFactorId] = useState<string | null>(null)
   const [selectedFactor, setSelectedFactor] = useState<Factor | null>(null)
 
+  useEffect(() => {
+    if (!sectionRef.current || !textRef.current) return
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=150%",
+          scrub: true,
+          pin: true,
+        },
+      })
+
+      tl.fromTo(
+        textRef.current,
+        { y: 200, opacity: 0 },
+        { y: 0, opacity: 1 }
+      )
+
+      tl.to(textRef.current, { y: -200, opacity: 0 })
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+
   return (
-  <div className="min-h-screen bg-slate-50 py-12 px-4 relative">
-    <IntroPopup />
+  <div ref={sectionRef} className="min-h-screen bg-slate-50 py-12 px-4 relative">
+
     <div className="max-w-5xl mx-auto">
       {/* Header */}
       <motion.div
@@ -395,6 +430,18 @@ export default function EVDecisionInfographic() {
           Khám phá các yếu tố thúc đẩy và cản trở quyết định mua xe điện tại Việt Nam
         </p>
       </motion.div>
+
+<div
+  ref={textRef}
+  className="absolute bottom-10 left-1/2 -translate-x-1/2 max-w-xl bg-orange-500/95 text-white p-6 rounded-2xl shadow-2xl z-50"
+>
+  <p className="text-base leading-relaxed">
+    Câu chuyện của chị Tuệ Minh, anh Anh Duy và anh Thanh Nhã không phải là những trường hợp cá biệt.
+    Quyết định sử dụng xe điện của họ là từ sự cân nhắc từ những ưu điểm, nhược điểm mà xe điện mang lại.
+    Song, việc người tiêu dùng lựa chọn sử dụng xe điện cũng chịu ảnh hưởng bởi nhiều yếu tố.
+  </p>
+</div>
+
 
       {/* Root node */}
       <motion.div
