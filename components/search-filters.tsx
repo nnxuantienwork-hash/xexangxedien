@@ -41,6 +41,18 @@ export default function SearchFilters({
         <p className="text-gray-600">
           Tìm trạm sạc gần bạn tại Thành phố Hồ Chí Minh (địa danh trước sáp nhập)
         </p>
+        {/* NOTE NHỎ */}
+<p className="text-xs text-gray-500 border-l-2 border-gray-300 pl-3 italic">
+  Dữ liệu về danh sách các trạm sạc VinFast tại khu vực TP. Hồ Chí Minh được tổng hợp và đối soát dựa trên thông tin từ{" "}
+  <a
+    href="https://oto360.net/tram-sac-vinfast-ho-chi-minh#heading-1"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline hover:text-gray-700"
+  >
+    Oto360.net
+  </a>. Các tọa độ hiển thị trên bản đồ mang tính chất tương đối giúp xác định khu vực phân bổ.
+</p>
       </div>
 
       {/* Search and filters row */}
