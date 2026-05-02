@@ -219,7 +219,7 @@ function FactorNode({
 
               >
 
-              <div className="relative z-0">
+              <div className="relative bg-inherit rounded-lg">
                 <div
                   className={`
                     absolute -top-5 left-6 w-0 h-0
