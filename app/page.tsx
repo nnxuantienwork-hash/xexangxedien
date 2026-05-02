@@ -286,6 +286,22 @@ export default function LongformArticle() {
           <FishboneDiagram />
         </section>
 
+        <section className="w-full py-12 bg-white">
+  <div className="max-w-3xl mx-auto px-4 md:px-8">
+    <p className="text-justify text-lg leading-relaxed text-slate-700">
+      Các quốc gia phát triển nhất về xe điện trên thế giới gồm Trung Quốc, châu Âu và Mỹ,
+      chiếm khoảng 93% thị phần xe điện toàn cầu. Để đạt được thành công đó, chính phủ
+      của các quốc gia này đã sớm đưa ra và thực thi chính sách thúc đẩy phát triển thị
+      trường xe điện trong hàng thập kỷ. Việt Nam có lợi thế để phát triển thị trường xe
+      điện như có tiềm năng nguồn điện sạch lớn (điện gió, điện mặt trời), những chính
+      sách ưu đãi với xe điện và doanh nghiệp sản xuất xe điện ngày càng được chú trọng.
+      Đây là những tín hiệu đáng mừng và chúng ta có quyền mơ về hạ tầng xe điện và sự
+      phát triển của xe điện nhiều hơn trong tương lai.
+    </p>
+  </div>
+</section>
+
+
 
         {/* Charging Stations Section */}
         <section className="w-full py-16 bg-slate-50">
