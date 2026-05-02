@@ -65,6 +65,25 @@ export default function LongformArticle() {
       <p className="text-justify text-lg leading-relaxed text-slate-700">
        Hiện nay, chị Minh sử dụng xe điện để đi từ nơi ở đến công ty với tần suất gần như mỗi ngày và quãng đường di chuyển khoảng 7km mỗi chiều. Do khoảng cách không quá xa, chiếc xe điện dùng một pin mà chị mua có thể đi được khoảng 130km cho mỗi lần sạc đầy, điều này giúp chị chỉ cần sạc khoảng một lần mỗi tuần.
       </p>
+      {/* Ảnh minh họa */}
+      <div className="my-6 flex justify-center">
+        <img
+          src="/images/bus.jpg" 
+          alt="Xe buýt điện tại TP.HCM"
+          className="w-full max-w-md rounded-lg shadow-md object-cover"
+        />
+      </div>
+<div className="my-6 flex flex-col items-center">
+  <img
+    src="/images/bus.jpg"
+    alt="Xe buýt điện tại TP.HCM"
+    className="w-full max-w-md rounded-lg shadow-md object-cover"
+  />
+  <p className="text-center text-sm text-slate-500 mt-4 italic max-w-3xl mx-auto px-4">
+    Nhiều kỳ vọng về tương lai của xe điện. Ảnh: Hữu Qui
+  </p>
+</div>
+
 
       <p className="text-justify text-lg leading-relaxed text-slate-700">
        Về chi phí dùng điện để sạc xe, chị Tuệ Minh chia sẻ: &quot;Giả sử lấy mức trung bình xe máy điện di chuyển 100km sau mỗi lần sạc đầy pin là khoảng 3kWh với giá điện hiện tại là 3.500 đồng/1kWh. Như vậy để đi được 100km người dùng xe máy điện sẽ phải chi trả 10.500 đồng để sạc pin. Tuần nào chị cũng sạc đều đặn nên là chị tốn hơn 50.000 - 70.000 đồng/tháng&quot;. 
@@ -191,7 +210,7 @@ export default function LongformArticle() {
     rightAlt="Trạm sạc xe điện VinFast"
   />
   <p className="text-center text-sm text-slate-500 mt-4 italic max-w-3xl mx-auto px-4">
-    Xe điện đang dần trở thành phương tiện di chuyển quen thuộc trong đời sống đô thị, với hệ thống trạm sạc ngày càng phủ rộng tại các thành phố lớn.
+    Xe điện đang dần trở thành phương tiện di chuyển quen thuộc trong đời sống đô thị, với hệ thống trạm sạc ngày càng phủ rộng tại các thành phố lớn. Ảnh: Xuân Tiên
   </p>
 </section>
 
