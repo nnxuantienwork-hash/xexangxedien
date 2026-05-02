@@ -329,7 +329,7 @@ function DetailModal({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
       <motion.div
@@ -451,7 +451,7 @@ export default function EVDecisionInfographic() {
 
 <div
   ref={textRef}
-  className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 max-w-xl bg-[#0f766e]/95 text-white p-6 rounded-2xl shadow-2xl z-50"
+  className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 max-w-xl bg-emerald-700/95 text-white/95 p-6 rounded-2xl shadow-2xl z-50"
 >
   <p className="text-base leading-relaxed">
     Câu chuyện của chị Tuệ Minh, anh Anh Duy và anh Thanh Nhã không phải là những trường hợp cá biệt.
