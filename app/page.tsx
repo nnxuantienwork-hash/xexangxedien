@@ -7,7 +7,8 @@ import FishboneDiagram from '@/components/FishboneDiagram';
 import { SplitImage } from '@/components/SplitImage';
 import { motion } from 'framer-motion';
 import EvDecisionInfographic from '@/components/ev-decision-infographic';
-import PolicyTimeline from "@/components/PolicyTimeline"
+
+
 
 
 
@@ -270,12 +271,6 @@ export default function LongformArticle() {
           <FishboneDiagram />
         </section>
 
-        {/* Policy Timeline */}
-        <section className="w-full py-16 bg-white">
-          <div className="max-w-5xl mx-auto px-4">
-            <PolicyTimeline />
-          </div>
-        </section>
 
         {/* Footer Section */}
         <footer className="w-full bg-slate-900 text-white py-12 px-4 md:px-8">
