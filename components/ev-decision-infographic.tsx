@@ -393,7 +393,7 @@ export default function EVDecisionInfographic() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=150%",
+          end: "+=60%",
           scrub: true,
           pin: true,
         },
@@ -413,7 +413,7 @@ export default function EVDecisionInfographic() {
 
 
   return (
-  <div ref={sectionRef} className="min-h-screen bg-slate-50 py-12 px-4 relative">
+  <div ref={sectionRef} className="bg-slate-50 py-12 px-4 relative">
 
     <div className="max-w-5xl mx-auto">
       {/* Header */}
