@@ -451,7 +451,7 @@ export default function EVDecisionInfographic() {
 
 <div
   ref={textRef}
-  className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 max-w-xl bg-orange-500/95 text-white p-6 rounded-2xl shadow-2xl z-50"
+  className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 max-w-xl bg-[#0f766e]/95 text-white p-6 rounded-2xl shadow-2xl z-50"
 >
   <p className="text-base leading-relaxed">
     Câu chuyện của chị Tuệ Minh, anh Anh Duy và anh Thanh Nhã không phải là những trường hợp cá biệt.
