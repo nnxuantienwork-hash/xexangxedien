@@ -72,19 +72,21 @@ export default function ChargingStationsMap({ searchQuery, selectedDistrict }: M
         </div>
 
         {/* MINI MAP */}
-        {hoveredStation?.id === station.id && (
-          <div className="absolute left-0 top-full mt-2 w-full h-48 rounded-lg overflow-hidden border shadow-lg z-[9999]">
-            <iframe
-              width="100%"
-              height="100%"
-              loading="eager"
-              className="border-0 pointer-events-none"
-              src={`https://www.google.com/maps?q=${encodeURIComponent(
-                station.address
-              )}&output=embed`}
-            />
-          </div>
-        )}
+        <div
+          className={`absolute left-0 top-full mt-2 w-48 h-28 rounded-lg overflow-hidden border shadow-lg z-[9999]
+          transition-all duration-200
+          ${hoveredStation?.id === station.id ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+        >
+          <iframe
+            width="100%"
+            height="100%"
+            loading="lazy"
+            className="border-0"
+            src={`https://www.google.com/maps?q=${encodeURIComponent(
+              station.address
+            )}&output=embed`}
+          />
+        </div>
       </div>
     ))}
   </div>
