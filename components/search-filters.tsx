@@ -39,7 +39,7 @@ export default function SearchFilters({
           Trạm Sạc VinFast
         </h1>
         <p className="text-gray-600">
-          Tìm trạm sạc gần bạn tại Thành phố Hồ Chí Minh
+          Tìm trạm sạc gần bạn tại Thành phố Hồ Chí Minh (địa danh trước sáp nhập)
         </p>
       </div>
 
