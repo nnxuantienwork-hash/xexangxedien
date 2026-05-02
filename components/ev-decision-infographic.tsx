@@ -150,7 +150,7 @@ function FactorNode({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: dimmed ? 0.3 : 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="relative"
+      className="relative z-0"
       onMouseEnter={() => onHover(factor.id)}
       onMouseLeave={() => onHover(null)}
       onClick={() => onClick(factor)}
@@ -208,11 +208,14 @@ function FactorNode({
               exit={{ y: 10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
               className={`
-                absolute z-[999] left-0 right-0 top-full mt-2 p-4 rounded-lg shadow-2xl
+                absolute z-[9999] left-0 right-0 top-full mt-2 p-4 rounded-lg shadow-2xl
                 ${isPositive ? "bg-emerald-700" : "bg-orange-600"}
                 text-white text-sm font-medium
-                isolate 
+                bg-opacity-100 backdrop-blur-0
+                before:absolute before:inset-0 before:bg-inherit before:rounded-lg before:z-[-1]
               `}
+            >
+
 
             >
               <div className="relative">
@@ -408,11 +411,11 @@ export default function EVDecisionInfographic() {
 
         {/* Connecting lines */}
         <div className="hidden lg:flex justify-center mb-8">
-          <div className="relative w-full max-w-2xl">
+          <div className="relative w-full max-w-5xl">
             <div className="absolute top-0 left-1/2 w-0.5 h-4 bg-slate-300 -translate-x-1/2" />
             <div className="absolute top-4 left-1/4 right-1/4 h-0.5 bg-slate-300" />
-            <div className="absolute top-4 left-1/4 w-0.5 h-4 bg-slate-300" />
-            <div className="absolute top-4 right-1/4 w-0.5 h-4 bg-slate-300" />
+            <div className="absolute top-4 left-[calc(25%-1rem)] w-0.5 h-4 bg-slate-300" />
+            <div className="absolute top-4 right-[calc(25%-1rem)] w-0.5 h-4 bg-slate-300" />
           </div>
         </div>
 
