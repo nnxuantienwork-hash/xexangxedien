@@ -66,12 +66,12 @@ export default function LongformArticle() {
        Hiện nay, chị Minh sử dụng xe điện để đi từ nơi ở đến công ty với tần suất gần như mỗi ngày và quãng đường di chuyển khoảng 7km mỗi chiều. Do khoảng cách không quá xa, chiếc xe điện dùng một pin mà chị mua có thể đi được khoảng 130km cho mỗi lần sạc đầy, điều này giúp chị chỉ cần sạc khoảng một lần mỗi tuần.
       </p>
       {/* Ảnh minh họa */}
-<div className="my-10">
-  <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen px-4">
+<div className="my-10 flex flex-col items-center">
+  <div className="w-screen px-4 flex justify-center">
     <img
       src="/images/xedien1.jpg"
       alt="Xe buýt điện tại TP.HCM"
-      className="w-full max-w-5xl mx-auto rounded-lg shadow-md object-cover"
+      className="w-full max-w-5xl rounded-lg shadow-md object-cover"
     />
   </div>
 
@@ -79,6 +79,7 @@ export default function LongformArticle() {
     Nhiều kỳ vọng về tương lai của xe điện. Ảnh: Hữu Qui
   </p>
 </div>
+
 
 
 
