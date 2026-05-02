@@ -387,62 +387,48 @@ export default function EVDecisionInfographic() {
   const [selectedFactor, setSelectedFactor] = useState<Factor | null>(null)
 
   useEffect(() => {
-    if (!sectionRef.current || !textRef.current || !overlayRef.current) return
+  if (!sectionRef.current || !textRef.current) return
 
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",     // ⭐ khi section chạm top màn hình
-          end: "+=150%",        // ⭐ kéo dài scroll để có không gian animation
-          scrub: true,
-          pin: true,            // ⭐ GIỮ BIỂU ĐỒ ĐỨNG YÊN
-        },
-      })
+  const ctx = gsap.context(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "+=80%",
+        scrub: true,
+        pin: true,
+        pinSpacing: true,
+      },
+    })
 
+    // PHASE 1: fade in từ dưới
+    tl.fromTo(
+      textRef.current,
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "power2.out" }
+    )
 
-      tl.fromTo(
-        textRef.current,
-        { y: 200, opacity: 0 },
-        { y: 0, opacity: 1 }
-      )
+    // PHASE 2: giữ
+    tl.to({}, { duration: 0.5 })
 
-      tl.to(
-        overlayRef.current,
-        {
-          backgroundColor: "rgba(0,0,0,0.25)",
-          bduration: 0.5,
-          ease: "power2.out",
-        },
-        "<"
-      )
-
-      tl.to(textRef.current, {
-        y: -400,
-        opacity: 0,
-      })
-
-      tl.to(
-        overlayRef.current,
-        {
-          backgroundColor: "rgba(0,0,0,0)",
-        },
-        "<"
-      )
-    }, sectionRef)
+    // PHASE 3: bay lên
+    tl.to(textRef.current, {
+      y: -250,
+      opacity: 0,
+      scale: 0.95,
+      duration: 1,
+      ease: "power2.in",
+    })
+  }, sectionRef)
 
   return () => ctx.revert()
 }, [])
 
 
 
+
   return (
   <div ref={sectionRef} className="bg-slate-50 py-12 px-4 relative">
-
-    <div
-      ref={overlayRef}
-      className="pointer-events-none absolute inset-0 z-40"
-    />
 
     <div className="max-w-5xl mx-auto">
       {/* Header */}
@@ -462,7 +448,7 @@ export default function EVDecisionInfographic() {
 
 <div
   ref={textRef}
-  className="absolute top-1/2 -translate-y-1/2 max-w-xl bg-orange-500/95 text-white p-6 rounded-2xl shadow-2xl z-50"
+  className="absolute left-1/2 -translate-x-1/2 top-[60%] max-w-xl bg-orange-500/95 text-white p-6 rounded-2xl shadow-2xl z-50"
 >
   <p className="text-base leading-relaxed">
     Câu chuyện của chị Tuệ Minh, anh Anh Duy và anh Thanh Nhã không phải là những trường hợp cá biệt.
