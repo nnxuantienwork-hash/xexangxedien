@@ -68,7 +68,7 @@ export default function LongformArticle() {
       {/* Ảnh minh họa */}
 <div className="my-8 flex flex-col items-center">
   <img
-    src="/images/bus.jpg"
+    src="/images/xedien1.jpg"
     alt="Xe buýt điện tại TP.HCM"
     className="w-full max-w-4xl rounded-lg shadow-md object-cover"
   />
