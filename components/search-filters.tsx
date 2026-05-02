@@ -9,7 +9,6 @@ interface SearchFiltersProps {
   onSearchChange: (query: string) => void;
   selectedDistrict: string;
   onDistrictChange: (district: string) => void;
-  resultCount: number;
 }
 
 export default function SearchFilters({
@@ -17,7 +16,6 @@ export default function SearchFilters({
   onSearchChange,
   selectedDistrict,
   onDistrictChange,
-  resultCount,
 }: SearchFiltersProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -111,11 +109,6 @@ export default function SearchFilters({
             </div>
           )}
         </div>
-      </div>
-
-      {/* Results counter */}
-      <div className="text-sm text-gray-600">
-        Tìm thấy <span className="font-semibold text-green-950">{resultCount}</span> trạm sạc
       </div>
     </div>
   );
