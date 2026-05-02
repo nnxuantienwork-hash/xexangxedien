@@ -391,23 +391,23 @@ export default function EVDecisionInfographic() {
 
   const ctx = gsap.context(() => {
     const tl = gsap.timeline({
-      defaults: { ease: "none" },
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top top",
-        end: "+=100%",
+        start: "center center",   // 👈 CHÌA KHÓA
+        end: "+=120%",            // 👈 đủ cho animation
         scrub: true,
         pin: true,
-        pinSpacing: false, // 🔥 QUAN TRỌNG
-        anticipatePin: 1, 
+        pinSpacing: true,         // 👈 PHẢI TRUE
+        anticipatePin: 1,
       },
     })
+
 
     // PHASE 1: fade in từ dưới
     tl.fromTo(
       textRef.current,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "power2.out" }
+      { y: 120, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1 }
     )
 
     // PHASE 2: giữ
@@ -415,11 +415,9 @@ export default function EVDecisionInfographic() {
 
     // PHASE 3: bay lên
     tl.to(textRef.current, {
-      y: -250,
+      y: -200,
       opacity: 0,
-      scale: 0.95,
       duration: 1,
-      ease: "power2.in",
     })
   }, sectionRef)
 
@@ -430,7 +428,10 @@ export default function EVDecisionInfographic() {
 
 
   return (
-  <div ref={sectionRef} className="bg-slate-50 py-12 px-4 relative min-h-[140vh]">
+  <div 
+    ref={sectionRef} 
+    className="bg-slate-50 py-12 px-4 relative"
+  >
 
     <div className="max-w-5xl mx-auto">
       {/* Header */}
