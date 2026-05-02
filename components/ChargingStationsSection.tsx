@@ -8,10 +8,17 @@ import { STATIONS_WITH_COORDS } from '../lib/charging-stations-data';
 export default function ChargingStationsSection() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDistrict, setSelectedDistrict] = useState('');
+  
+console.log({
+  searchQuery,
+  selectedDistrict,
+});
 
 
   return (
   <div className="max-w-5xl mx-auto px-4 py-12">
+
+    {/* ===== SEARCH ===== */}
     <SearchFilters
       searchQuery={searchQuery}
       onSearchChange={setSearchQuery}
@@ -19,7 +26,7 @@ export default function ChargingStationsSection() {
       onDistrictChange={setSelectedDistrict}
     />
 
-    {/* 👉 CHỈ HIỆN KHI CHƯA SEARCH */}
+    {/* 👉 CHỈ HIỆN BIỂU ĐỒ KHI CHƯA SEARCH */}
     {!searchQuery.trim() && !selectedDistrict && (
       <>
         {(() => {
@@ -40,7 +47,7 @@ export default function ChargingStationsSection() {
               <div className="grid grid-cols-2 gap-4 my-6">
                 {stats.map((item) => (
                   <div key={item.district} className="bg-white p-4 rounded-lg shadow">
-                    
+
                     <div className="flex justify-between mb-1">
                       <span className="text-sm font-medium">{item.district}</span>
                       <span className="text-xs text-gray-500">
@@ -83,11 +90,15 @@ export default function ChargingStationsSection() {
       </>
     )}
 
-    {/* ===== DANH SÁCH TRẠM ===== */}
-    <ChargingStationsMap
-      searchQuery={searchQuery}
-      selectedDistrict={selectedDistrict}
-    />
+    {/* 👉 CHỈ HIỆN DANH SÁCH KHI CÓ SEARCH */}
+{(searchQuery.trim() !== '' || selectedDistrict !== '') && (
+  <ChargingStationsMap
+    searchQuery={searchQuery}
+    selectedDistrict={selectedDistrict}
+  />
+)}
+
+
   </div>
 );
 }
