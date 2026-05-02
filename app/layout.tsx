@@ -19,7 +19,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: 'CHƯA ĐẶT TIT BÁO',
+  title: 'Nhiều kỳ vọng về tương lai của xe điện',
   description: 'Câu chuyện xe xăng và xe điện hiện nay đã vượt ra ngoài giới hạn của một "chiếc xe" thông thường, mà đó là câu chuyện về những "giải pháp di chuyển" của người người nhân. Các phương tiện sử dụng nhiên liệu xanh, thân thiện với môi trường này đang được chú trọng như là một cách giải quyết tình trạng ô nhiễm môi trường.',
   generator: 'v0.app',
   icons: {
