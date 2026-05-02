@@ -396,6 +396,7 @@ export default function EVDecisionInfographic() {
           end: "+=60%",
           scrub: true,
           pin: true,
+          pinSpacing: false,
         },
       })
 
