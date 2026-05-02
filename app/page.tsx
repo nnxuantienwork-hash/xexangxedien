@@ -70,7 +70,7 @@ export default function LongformArticle() {
   <img
     src="/images/bus.jpg"
     alt="Xe buýt điện tại TP.HCM"
-    className="rounded-lg shadow-md object-cover"
+    className="w-full max-w-4xl rounded-lg shadow-md object-cover"
   />
   <p className="text-center text-sm text-slate-500 mt-4 italic max-w-3xl mx-auto px-4">
     Nhiều kỳ vọng về tương lai của xe điện. Ảnh: Hữu Qui
