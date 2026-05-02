@@ -391,13 +391,15 @@ export default function EVDecisionInfographic() {
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
-          scrollTrigger: {
+        scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
-          end: "top -20%",
+          start: "top top",     // ⭐ khi section chạm top màn hình
+          end: "+=150%",        // ⭐ kéo dài scroll để có không gian animation
           scrub: true,
+          pin: true,            // ⭐ GIỮ BIỂU ĐỒ ĐỨNG YÊN
         },
       })
+
 
       tl.fromTo(
         textRef.current,
@@ -408,8 +410,9 @@ export default function EVDecisionInfographic() {
       tl.to(
         overlayRef.current,
         {
-          backgroundColor: "rgba(0,0,0,0.4)",
-          backdropFilter: "blur(6px)",
+          backgroundColor: "rgba(0,0,0,0.25)",
+          bduration: 0.5,
+          ease: "power2.out",
         },
         "<"
       )
@@ -423,7 +426,6 @@ export default function EVDecisionInfographic() {
         overlayRef.current,
         {
           backgroundColor: "rgba(0,0,0,0)",
-          backdropFilter: "blur(0px)",
         },
         "<"
       )
@@ -460,7 +462,7 @@ export default function EVDecisionInfographic() {
 
 <div
   ref={textRef}
-  className="absolute top-[70%] left-1/2 -translate-x-1/2 max-w-xl bg-orange-500/95 text-white p-6 rounded-2xl shadow-2xl z-50"
+  className="absolute top-1/2 -translate-y-1/2 max-w-xl bg-orange-500/95 text-white p-6 rounded-2xl shadow-2xl z-50"
 >
   <p className="text-base leading-relaxed">
     Câu chuyện của chị Tuệ Minh, anh Anh Duy và anh Thanh Nhã không phải là những trường hợp cá biệt.
