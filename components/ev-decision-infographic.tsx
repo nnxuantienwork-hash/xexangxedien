@@ -411,11 +411,13 @@ export default function EVDecisionInfographic() {
 
         {/* Connecting lines */}
         <div className="hidden lg:flex justify-center mb-8">
-          <div className="relative w-full max-w-5xl">
+          <div className="relative w-full max-w-5xl flex justify-between px-4">
             <div className="absolute top-0 left-1/2 w-0.5 h-4 bg-slate-300 -translate-x-1/2" />
             <div className="absolute top-4 left-1/4 right-1/4 h-0.5 bg-slate-300" />
-            <div className="absolute top-4 left-[calc(25%-1rem)] w-0.5 h-4 bg-slate-300" />
-            <div className="absolute top-4 right-[calc(25%-1rem)] w-0.5 h-4 bg-slate-300" />
+            <div className="absolute top-4 left-0 right-0 flex justify-between px-4">
+              <div className="w-0.5 h-4 bg-slate-300" />
+              <div className="w-0.5 h-4 bg-slate-300" />
+            </div>
           </div>
         </div>
 
