@@ -37,7 +37,13 @@ export default function ChargingStationsMap({ searchQuery, selectedDistrict }: M
       <div
         key={station.id}
         onMouseEnter={() => setHoveredStation(station)}
-        onMouseLeave={() => setHoveredStation(null)}
+
+        onMouseLeave={(e) => {
+          if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+            setHoveredStation(null);
+          }
+        }}
+
         onClick={() => {
           window.open(
             `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`,
@@ -71,8 +77,8 @@ export default function ChargingStationsMap({ searchQuery, selectedDistrict }: M
             <iframe
               width="100%"
               height="100%"
-              loading="lazy"
-              className="border-0"
+              loading="eager"
+              className="border-0 pointer-events-none"
               src={`https://www.google.com/maps?q=${encodeURIComponent(
                 station.address
               )}&output=embed`}
