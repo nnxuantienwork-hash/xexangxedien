@@ -89,7 +89,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.5 }}
           >
-            CHƯA ĐẶT TIT BÁO
+            Nhiều kỳ vọng về tương lai của xe điện 
           </motion.h1>
 
           {/* Meta information */}
@@ -102,10 +102,6 @@ export function HeroSection() {
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
               02 tháng 05, 2026
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-              Nhóm phóng viên báo Thành Phố Mới
             </span>
           </motion.div>
 
