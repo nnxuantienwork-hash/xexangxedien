@@ -1,5 +1,5 @@
 "use client"
-
+import IntroPopup from "./IntroPopup"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
@@ -378,7 +378,8 @@ export default function EVDecisionInfographic() {
   const [selectedFactor, setSelectedFactor] = useState<Factor | null>(null)
 
   return (
-  <div className="min-h-screen bg-slate-50 py-12 px-4">
+  <div className="min-h-screen bg-slate-50 py-12 px-4 relative">
+    <IntroPopup />
     <div className="max-w-5xl mx-auto">
       {/* Header */}
       <motion.div
